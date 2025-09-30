@@ -20,7 +20,7 @@ const Hero = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="container-custom py-20 md:py-32 relative z-10">
+      <div className="container-custom py-20 md:py-32 relative z-10 px-4">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <div className="flex items-center justify-center gap-2 mb-6">
             <Code2 className="text-primary w-8 h-8 md:w-10 md:h-10" />

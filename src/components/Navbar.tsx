@@ -36,7 +36,7 @@ const Navbar = () => {
         isScrolled ? "bg-background/95 backdrop-blur-md shadow-soft" : "bg-transparent"
       }`}
     >
-      <div className="container-custom">
+      <div className="container-custom px-4 md:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <button
             onClick={() => scrollToSection("hero")}
@@ -76,7 +76,7 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 animate-fade-in">
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 px-4">
               {navLinks.map((link) => (
                 <button
                   key={link.id}

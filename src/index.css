@@ -125,7 +125,7 @@ All colors MUST be HSL.
   }
   
   .container-custom {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-7xl mx-auto px-4 md:px-8;
   }
   
   .card-hover {
