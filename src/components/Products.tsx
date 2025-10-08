@@ -3,8 +3,19 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
+interface Product {
+  icon: any;
+  name: string;
+  tagline: string;
+  features: string[];
+  targetAudience: string;
+  color: string;
+  bgColor: string;
+  comingSoon?: boolean;
+}
+
 const Products = () => {
-  const products = [
+  const products: Product[] = [
     {
       icon: Hotel,
       name: "Hotel Management System",
@@ -22,8 +33,8 @@ const Products = () => {
     },
     {
       icon: ShoppingCart,
-      name: "POS Billing Software",
-      tagline: "Smart retail management",
+      name: "Billing POS",
+      tagline: "Smart retail management - Coming Soon",
       features: [
         "Fast billing & invoicing",
         "Inventory management",
@@ -34,6 +45,7 @@ const Products = () => {
       targetAudience: "Retail stores, Cafes, Restaurants",
       color: "text-green-500",
       bgColor: "bg-green-50",
+      comingSoon: true,
     },
     {
       icon: GraduationCap,
@@ -117,9 +129,12 @@ const Products = () => {
                   <Button
                     onClick={() => handleDemo(product.name)}
                     className="w-full btn-primary group"
+                    disabled={product.comingSoon}
                   >
-                    Request Demo
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    {product.comingSoon ? "Coming Soon" : "Request Demo"}
+                    {!product.comingSoon && (
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    )}
                   </Button>
                 </CardContent>
               </Card>

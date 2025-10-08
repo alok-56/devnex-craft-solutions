@@ -33,7 +33,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            I build mobile apps, web platforms, APIs, and integrations — and offer
+            We build mobile apps, web platforms, APIs, and integrations — and offer
             business-ready software products that solve real problems.
           </p>
           

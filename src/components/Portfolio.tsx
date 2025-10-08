@@ -17,32 +17,92 @@ import vehicleApp1 from "@/assets/vehicle-app-1.jpg";
 import vehicleApp2 from "@/assets/vehicle-app-2.jpg";
 import dtechApp1 from "@/assets/dtech-app-1.jpg";
 import dtechApp2 from "@/assets/dtech-app-2.jpg";
+import waterstepsApp1 from "@/assets/watersteps-app-1.jpg";
+import waterstepsApp2 from "@/assets/watersteps-app-2.jpg";
+import bksApp1 from "@/assets/bks-app-1.jpg";
+import bksApp2 from "@/assets/bks-app-2.jpg";
+import appretailApp1 from "@/assets/appretail-app-1.jpg";
+import appretailApp2 from "@/assets/appretail-app-2.jpg";
+import hotelManagement1 from "@/assets/hotel-management-1.jpg";
+import hotelManagement2 from "@/assets/hotel-management-2.jpg";
+import mlmWebsite1 from "@/assets/mlm-website-1.jpg";
+import mlmWebsite2 from "@/assets/mlm-website-2.jpg";
+import tonyogaApp1 from "@/assets/tonyoga-app-1.jpg";
+import tonyogaApp2 from "@/assets/tonyoga-app-2.jpg";
 
 const Portfolio = () => {
   const projects = [
     {
-      name: "Yoga App",
-      description: "A comprehensive yoga and meditation app with guided sessions, progress tracking, and personalized workout plans. Features calming UI with smooth animations.",
-      images: [yogaApp1, yogaApp2],
-      tech: ["Flutter", "Firebase", "REST API"],
-      category: "Health & Fitness",
-      color: "bg-purple-500",
-    },
-    {
-      name: "Vehicle Sathi App",
-      description: "Complete vehicle management solution with real-time tracking, service booking, maintenance reminders, and mechanic connection features.",
-      images: [vehicleApp1, vehicleApp2],
-      tech: ["React Native", "Google Maps", "Node.js"],
-      category: "Automotive",
-      color: "bg-orange-500",
-    },
-    {
-      name: "Dtech App",
+      name: "Dtech",
       description: "Enterprise technology platform for IoT device management, analytics dashboard, and smart control systems for businesses.",
       images: [dtechApp1, dtechApp2],
       tech: ["Flutter", "MongoDB", "IoT Integration"],
       category: "Technology",
       color: "bg-green-500",
+      link: "https://play.google.com/store/apps/details?id=com.dtechnewsolution&hl=en_US",
+    },
+    {
+      name: "VehicleSathi",
+      description: "Complete vehicle management solution with real-time tracking, service booking, maintenance reminders, and emergency services for seamless vehicle care.",
+      images: [vehicleApp1, vehicleApp2],
+      tech: ["Flutter", "Google Maps", "Node.js", "Firebase"],
+      category: "Automotive",
+      color: "bg-blue-500",
+      link: "https://play.google.com/store/apps/details?id=com.vehiclesathi_app",
+    },
+    {
+      name: "Watersteps",
+      description: "Comprehensive food ordering and billing management system for restaurants. Features order tracking, invoice management, and customer account handling.",
+      images: [waterstepsApp1, waterstepsApp2],
+      tech: ["Flutter", "REST API", "Payment Gateway"],
+      category: "Food & Beverage",
+      color: "bg-green-600",
+      link: "https://play.google.com/store/apps/details?id=com.watersteps&hl=en_US",
+    },
+    {
+      name: "BKS",
+      description: "Advanced attendance tracking and task management app with self-service check-in/out, location-based attendance, and detailed history records.",
+      images: [bksApp1, bksApp2],
+      tech: ["Flutter", "Firebase", "Geolocation"],
+      category: "Business",
+      color: "bg-pink-500",
+      link: "https://apps.apple.com/us/app/bks/id6743420830",
+    },
+    {
+      name: "AppRetail",
+      description: "Streamlined vehicle inspection & reporting system with QR code scanning, comprehensive vehicle management, and detailed inspection tracking for dealerships.",
+      images: [appretailApp1, appretailApp2],
+      tech: ["Flutter", "QR Integration", "MongoDB"],
+      category: "Automotive",
+      color: "bg-purple-600",
+      link: "https://apps.apple.com/in/app/appretail/id6741881294",
+    },
+    {
+      name: "Hotel Management System",
+      description: "Complete hospitality solution with booking management, revenue analytics, room tracking, guest directory, and performance insights for hotels and resorts.",
+      images: [hotelManagement1, hotelManagement2],
+      tech: ["React", "Node.js", "PostgreSQL", "Analytics"],
+      category: "Hospitality",
+      color: "bg-blue-600",
+      link: null,
+    },
+    {
+      name: "MLM Platform",
+      description: "Multi-level marketing platform with commission tracking, member network visualization, transaction management, and comprehensive business analytics.",
+      images: [mlmWebsite1, mlmWebsite2],
+      tech: ["React", "Node.js", "MongoDB", "Charts"],
+      category: "Business",
+      color: "bg-indigo-600",
+      link: "https://www.silverx.site/#/login",
+    },
+    {
+      name: "Tonyoga",
+      description: "Yoga and wellness management platform with class scheduling, instructor profiles, student tracking, membership management, and booking system.",
+      images: [tonyogaApp1, tonyogaApp2],
+      tech: ["React", "Firebase", "Payment Integration"],
+      category: "Health & Fitness",
+      color: "bg-purple-500",
+      link: null,
     },
   ];
 
@@ -116,19 +176,35 @@ const Portfolio = () => {
                   </div>
                 </div>
 
-                <Button
-                  variant="outline"
-                  className="w-full border-primary text-primary hover:bg-primary-light group"
-                  onClick={() => {
-                    const contactSection = document.getElementById("contact");
-                    if (contactSection) {
-                      contactSection.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
-                >
-                  Request Similar App
-                  <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <div className="flex gap-2">
+                  {project.link && (
+                    <Button
+                      variant="outline"
+                      className="flex-1 border-primary text-primary hover:bg-primary hover:text-white group"
+                      onClick={() => window.open(project.link!, "_blank")}
+                    >
+                      View Live
+                      <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  )}
+                  <Button
+                    variant={project.link ? "outline" : "default"}
+                    className={`${project.link ? "flex-1" : "w-full"} ${
+                      project.link
+                        ? "border-border hover:bg-secondary"
+                        : "btn-primary"
+                    } group`}
+                    onClick={() => {
+                      const contactSection = document.getElementById("contact");
+                      if (contactSection) {
+                        contactSection.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }}
+                  >
+                    Request Similar
+                    <Smartphone className="ml-2 w-4 h-4 group-hover:scale-110 transition-transform" />
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           ))}

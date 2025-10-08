@@ -12,6 +12,10 @@ const About = () => {
     "TypeScript",
     "MongoDB",
     "PostgreSQL",
+    ".NET",
+    "Angular",
+    "Python",
+    "Java",
   ];
 
   return (
@@ -20,7 +24,7 @@ const About = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
-              About <span className="gradient-text">My Journey</span>
+              About <span className="gradient-text">Our Journey</span>
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
           </div>
@@ -28,17 +32,17 @@ const About = () => {
           <div className="space-y-6 text-lg text-muted-foreground mb-12">
             <p>
               With over <span className="text-primary font-semibold">5+ years of experience</span> in
-              full-stack development, I've built everything from mobile apps for Android and iOS to
+              full-stack development, we've built everything from mobile apps for Android and iOS to
               complex web platforms and backend systems.
             </p>
             <p>
-              My focus isn't just on writing clean code — it's on{" "}
+              Our focus isn't just on writing clean code — it's on{" "}
               <span className="text-foreground font-semibold">solving real business problems</span>.
-              Whether you need a custom app, a scalable API, or a third-party integration, I bring
+              Whether you need a custom app, a scalable API, or a third-party integration, we bring
               technical expertise and business value to every project.
             </p>
             <p>
-              Beyond freelance work, I've developed and launched{" "}
+              Beyond freelance work, we've developed and launched{" "}
               <span className="text-foreground font-semibold">business-ready SaaS products</span> that
               help hotels, retailers, and educational institutes streamline their operations.
             </p>
