@@ -76,7 +76,7 @@ const Products = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-1 gap-8 max-w-4xl mx-auto">
           {products.map((product, index) => {
             const Icon = product.icon;
             return (
@@ -85,43 +85,45 @@ const Products = () => {
                 className="card-hover border-border bg-card animate-fade-in-up overflow-hidden"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <CardHeader>
-                  <div className={`w-16 h-16 rounded-xl ${product.bgColor} flex items-center justify-center mb-4`}>
-                    <Icon className={`${product.color} w-8 h-8`} />
-                  </div>
-                  <CardTitle className="text-2xl">{product.name}</CardTitle>
-                  <CardDescription className="text-base font-medium">{product.tagline}</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div>
-                    <h4 className="font-semibold mb-3 text-foreground">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {product.features.map((feature) => (
-                        <li key={feature} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0"></div>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <Badge variant="secondary" className="text-xs">
-                      For: {product.targetAudience}
-                    </Badge>
-                  </div>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <CardHeader>
+                    <div className={`w-16 h-16 rounded-xl ${product.bgColor} flex items-center justify-center mb-4`}>
+                      <Icon className={`${product.color} w-8 h-8`} />
+                    </div>
+                    <CardTitle className="text-2xl">{product.name}</CardTitle>
+                    <CardDescription className="text-base font-medium">{product.tagline}</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-6 md:pt-6">
+                    <div>
+                      <h4 className="font-semibold mb-3 text-foreground">Key Features:</h4>
+                      <ul className="space-y-2">
+                        {product.features.map((feature) => (
+                          <li key={feature} className="flex items-start gap-2 text-sm text-muted-foreground">
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0"></div>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <Badge variant="secondary" className="text-xs">
+                        For: {product.targetAudience}
+                      </Badge>
+                    </div>
 
-                  <Button
-                    onClick={() => handleDemo(product.name)}
-                    className="w-full btn-primary group"
-                    disabled={product.comingSoon}
-                  >
-                    {product.comingSoon ? "Coming Soon" : "Request Demo"}
-                    {!product.comingSoon && (
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    )}
-                  </Button>
-                </CardContent>
+                    <Button
+                      onClick={() => handleDemo(product.name)}
+                      className="w-full btn-primary group"
+                      disabled={product.comingSoon}
+                    >
+                      {product.comingSoon ? "Coming Soon" : "Request Demo"}
+                      {!product.comingSoon && (
+                        <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      )}
+                    </Button>
+                  </CardContent>
+                </div>
               </Card>
             );
           })}
