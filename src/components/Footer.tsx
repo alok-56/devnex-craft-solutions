@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-xl font-bold mb-4 text-foreground">
-              The<span className="text-primary">Reactots</span>
+              The<span className="text-primary">Reactors</span>
             </h3>
             <p className="text-muted-foreground">
               Building scalable applications and software solutions that drive business growth.
@@ -64,7 +64,7 @@ const Footer = () => {
 
         <div className="pt-8 border-t border-border text-center text-muted-foreground">
           <p className="flex items-center justify-center gap-2">
-            © {currentYear} TheReactots. Made with{" "}
+            © {currentYear} TheReactors. Made with{" "}
             <Heart className="w-4 h-4 text-red-500 fill-red-500" /> for businesses worldwide.
           </p>
         </div>
