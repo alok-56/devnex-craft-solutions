@@ -1,4 +1,4 @@
-import { Hotel, ShoppingCart, GraduationCap, ArrowRight } from "lucide-react";
+import { Hotel, ShoppingCart, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -46,21 +46,6 @@ const Products = () => {
       color: "text-green-500",
       bgColor: "bg-green-50",
       comingSoon: true,
-    },
-    {
-      icon: GraduationCap,
-      name: "Institute Management System",
-      tagline: "Education made efficient",
-      features: [
-        "Student records & profiles",
-        "Attendance tracking",
-        "Fee management & receipts",
-        "Staff & teacher management",
-        "Performance reports & analytics",
-      ],
-      targetAudience: "Schools, Training centers, Coaching institutes",
-      color: "text-purple-500",
-      bgColor: "bg-purple-50",
     },
   ];
 
