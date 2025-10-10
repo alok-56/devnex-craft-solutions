@@ -55,9 +55,7 @@ const Footer = () => {
               <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                 LinkedIn
               </a>
-              <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                GitHub
-              </a>
+             
             </div>
           </div>
         </div>
