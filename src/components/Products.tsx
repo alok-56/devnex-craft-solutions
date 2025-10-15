@@ -1,7 +1,8 @@
-import { Hotel, ShoppingCart, ArrowRight } from "lucide-react";
+import { Hotel, ShoppingCart, ArrowRight, X } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useState } from "react";
 
 interface Product {
   icon: any;
@@ -14,7 +15,23 @@ interface Product {
   comingSoon?: boolean;
 }
 
+interface AttachmentImage {
+  id: number;
+  name: string;
+  path: string;
+}
+
 const Products = () => {
+  const [selectedImage, setSelectedImage] = useState<AttachmentImage | null>(null);
+
+  const attachmentImages: AttachmentImage[] = [
+    { id: 1, name: "1.png", path: "/src/assets/Appretail/1.png" },
+    { id: 2, name: "2.png", path: "/src/assets/Appretail/2.png" },
+    { id: 3, name: "3.png", path: "/src/assets/Appretail/3.png" },
+    { id: 4, name: "4.png", path: "/src/assets/Appretail/4.png" },
+    { id: 5, name: "5.png", path: "/src/assets/Appretail/5.png" },
+  ];
+
   const products: Product[] = [
     {
       icon: Hotel,
@@ -53,7 +70,6 @@ const Products = () => {
     const contactSection = document.getElementById("contact");
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: "smooth" });
-      // Pre-fill the message in the contact form
       setTimeout(() => {
         const messageField = document.querySelector('textarea[name="message"]') as HTMLTextAreaElement;
         if (messageField) {
@@ -128,7 +144,65 @@ const Products = () => {
             );
           })}
         </div>
+
+        {/* Attachments Section */}
+        <div className="mt-16 max-w-4xl mx-auto">
+          <Card className="card-hover border-border bg-card">
+            <CardHeader>
+              <CardTitle className="text-2xl">Attachments</CardTitle>
+              <CardDescription>Project images and screenshots</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                {attachmentImages.map((image) => (
+                  <div
+                    key={image.id}
+                    onClick={() => setSelectedImage(image)}
+                    className="relative group cursor-pointer overflow-hidden rounded-lg bg-muted aspect-square flex items-center justify-center hover:shadow-lg transition-shadow"
+                  >
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                      <span className="text-sm font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                        View
+                      </span>
+                    </div>
+                    <span className="text-muted-foreground text-sm text-center px-2">{image.name}</span>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
       </div>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div
+            className="bg-card rounded-lg overflow-hidden max-w-2xl w-full relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 p-2 bg-black/20 hover:bg-black/40 rounded-full transition-colors z-10"
+            >
+              <X className="w-6 h-6 text-white" />
+            </button>
+            <div className="bg-muted aspect-video flex items-center justify-center">
+              <div className="text-center">
+                <p className="text-muted-foreground text-lg">Image Preview</p>
+                <p className="text-sm text-muted-foreground mt-2">{selectedImage.path}</p>
+              </div>
+            </div>
+            <div className="p-4 border-t border-border">
+              <p className="font-semibold">{selectedImage.name}</p>
+              <p className="text-sm text-muted-foreground mt-1">{selectedImage.path}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
