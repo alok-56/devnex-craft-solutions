@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, ExternalLink, Smartphone } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  ExternalLink,
+  Smartphone,
+} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -11,76 +16,107 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import yogaApp1 from "@/assets/yoga-app-1.jpg";
-import yogaApp2 from "@/assets/yoga-app-2.jpg";
-import vehicleApp1 from "@/assets/vehicle-app-1.jpg";
-import vehicleApp2 from "@/assets/vehicle-app-2.jpg";
-import dtechApp1 from "@/assets/dtech-app-1.jpg";
-import dtechApp2 from "@/assets/dtech-app-2.jpg";
-import waterstepsApp1 from "@/assets/watersteps-app-1.jpg";
-import waterstepsApp2 from "@/assets/watersteps-app-2.jpg";
-import bksApp1 from "@/assets/bks-app-1.jpg";
-import bksApp2 from "@/assets/bks-app-2.jpg";
-import appretailApp1 from "@/assets/appretail-app-1.jpg";
-import appretailApp2 from "@/assets/appretail-app-2.jpg";
-import hotelManagement1 from "@/assets/hotel-management-1.jpg";
-import hotelManagement2 from "@/assets/hotel-management-2.jpg";
-import mlmWebsite1 from "@/assets/mlm-website-1.jpg";
-import mlmWebsite2 from "@/assets/mlm-website-2.jpg";
-import tonyogaApp1 from "@/assets/tonyoga-app-1.jpg";
-import tonyogaApp2 from "@/assets/tonyoga-app-2.jpg";
+import vehicleApp1 from "@/assets/Vehiclesathi/1.png";
+import vehicleApp2 from "@/assets/Vehiclesathi/2.png";
+import vehicleApp3 from "@/assets/Vehiclesathi/3.png";
+import vehicleApp4 from "@/assets/Vehiclesathi/4.png";
+import vehicleApp5 from "@/assets/Vehiclesathi/5.png";
+import dtechApp1 from "@/assets/Dtech/1.png";
+import dtechApp2 from "@/assets/Dtech/2.png";
+import dtechApp3 from "@/assets/Dtech/3.png";
+import dtechApp4 from "@/assets/Dtech/4.png";
+import waterstepsApp1 from "@/assets/Watersteps/1.png";
+import waterstepsApp2 from "@/assets/Watersteps/2.png";
+import waterstepsApp3 from "@/assets/Watersteps/3.png";
+import waterstepsApp4 from "@/assets/Watersteps/4.png";
+import bksApp1 from "@/assets/BKS/1.png";
+import bksApp2 from "@/assets/BKS/2.png";
+import bksApp3 from "@/assets/BKS/3.png";
+import bksApp4 from "@/assets/BKS/4.png";
+import appretailApp1 from "@/assets/Appretail/1.png";
+import appretailApp2 from "@/assets/Appretail/2.png";
+import appretailApp3 from "@/assets/Appretail/3.png";
+import appretailApp4 from "@/assets/Appretail/4.png";
+import hotelManagement1 from "@/assets/Hotel/1.png";
+import hotelManagement2 from "@/assets/Hotel/2.png";
+import hotelManagement3 from "@/assets/Hotel/3.png";
+import hotelManagement4 from "@/assets/Hotel/4.png";
+import hotelManagement5 from "@/assets/Hotel/5.png";
+import mlmWebsite1 from "@/assets/MLM/1.png";
+import mlmWebsite2 from "@/assets/MLM/2.png";
+import mlmWebsite3 from "@/assets/MLM/3.png";
+import mlmWebsite4 from "@/assets/MLM/4.png";
+import tonyogaApp1 from "@/assets/Yoga/1.png";
+import tonyogaApp2 from "@/assets/Yoga/2.png";
+import tonyogaApp3 from "@/assets/Yoga/3.png";
+import tonyogaApp4 from "@/assets/Yoga/4.png";
+import tonyogaApp5 from "@/assets/Yoga/5.png";
+import tonyogaApp6 from "@/assets/Yoga/6.png";
 
 const Portfolio = () => {
   const projects = [
     {
-      name: "Dtech",
-      description: "Enterprise technology platform for IoT device management, analytics dashboard, and smart control systems for businesses.",
-      images: [dtechApp1, dtechApp2],
-      tech: ["Flutter", "MongoDB", "IoT Integration"],
-      category: "Technology",
-      color: "bg-green-500",
-      link: "https://play.google.com/store/apps/details?id=com.dtechnewsolution&hl=en_US",
-    },
-    {
       name: "VehicleSathi",
-      description: "Complete vehicle management solution with real-time tracking, service booking, maintenance reminders, and emergency services for seamless vehicle care.",
-      images: [vehicleApp1, vehicleApp2],
-      tech: ["Flutter", "Google Maps", "Node.js", "Firebase"],
+      description:
+        "Comprehensive mechanic booking and vehicle service management app that allows users to find, book, and track trusted mechanics nearby while managing vehicle maintenance seamlessly.",
+      images: [vehicleApp2, vehicleApp3, vehicleApp4, vehicleApp5, vehicleApp1],
+      tech: ["React native", "Google Maps", "Node.js", "Firebase"],
       category: "Automotive",
       color: "bg-blue-500",
       link: "https://play.google.com/store/apps/details?id=com.vehiclesathi_app",
     },
     {
+      name: "Dtech",
+      description:
+        "Smart electric meter management application designed for monitoring, controlling, and deducting energy usage in real-time. Enables efficient IoT-based electricity tracking and consumption optimization.",
+      images: [dtechApp1, dtechApp2, dtechApp3, dtechApp4],
+      tech: ["React Native", "MongoDB", "IoT Integration"],
+      category: "Technology",
+      color: "bg-green-500",
+      link: "https://play.google.com/store/apps/details?id=com.dtechnewsolution&hl=en_US",
+    },
+
+    {
       name: "Watersteps",
-      description: "Comprehensive food ordering and billing management system for restaurants. Features order tracking, invoice management, and customer account handling.",
-      images: [waterstepsApp1, waterstepsApp2],
-      tech: ["Flutter", "REST API", "Payment Gateway"],
-      category: "Food & Beverage",
+      description:
+        "Offline e-commerce solution designed for local shop owners to manage in-store and delivery orders efficiently. Includes product cataloging, billing, and inventory management without internet dependency.",
+      images: [waterstepsApp1, waterstepsApp2, waterstepsApp3, waterstepsApp4],
+      tech: ["React native", "REST API", "Payment Gateway"],
+      category: "Retail",
       color: "bg-green-600",
       link: "https://play.google.com/store/apps/details?id=com.watersteps&hl=en_US",
     },
     {
       name: "BKS",
-      description: "Advanced attendance tracking and task management app with self-service check-in/out, location-based attendance, and detailed history records.",
-      images: [bksApp1, bksApp2],
-      tech: ["Flutter", "Firebase", "Geolocation"],
+      description:
+        "Advanced attendance management system featuring real-time employee check-in/out, geolocation-based tracking, task monitoring, and comprehensive attendance history analytics.",
+      images: [bksApp1, bksApp2, bksApp3, bksApp4],
+      tech: ["React native", "Firebase", "Geolocation"],
       category: "Business",
       color: "bg-pink-500",
       link: "https://apps.apple.com/us/app/bks/id6743420830",
     },
     {
       name: "AppRetail",
-      description: "Streamlined vehicle inspection & reporting system with QR code scanning, comprehensive vehicle management, and detailed inspection tracking for dealerships.",
-      images: [appretailApp1, appretailApp2],
-      tech: ["Flutter", "QR Integration", "MongoDB"],
+      description:
+        "End-to-end vehicle management and inspection system for dealerships, integrating QR code scanning, detailed inspection reporting, and vehicle lifecycle tracking to streamline operations.",
+      images: [appretailApp1, appretailApp2, appretailApp3, appretailApp4],
+      tech: ["React native", "QR Integration", "MongoDB"],
       category: "Automotive",
       color: "bg-purple-600",
       link: "https://apps.apple.com/in/app/appretail/id6741881294",
     },
     {
       name: "Hotel Management System",
-      description: "Complete hospitality solution with booking management, revenue analytics, room tracking, guest directory, and performance insights for hotels and resorts.",
-      images: [hotelManagement1, hotelManagement2],
+      description:
+        "Comprehensive hotel management platform offering booking management, revenue tracking, room allocation, guest directory, and insightful analytics for efficient hospitality operations.",
+      images: [
+        hotelManagement1,
+        hotelManagement2,
+        hotelManagement3,
+        hotelManagement4,
+        hotelManagement5,
+      ],
       tech: ["React", "Node.js", "PostgreSQL", "Analytics"],
       category: "Hospitality",
       color: "bg-blue-600",
@@ -88,8 +124,9 @@ const Portfolio = () => {
     },
     {
       name: "MLM Platform",
-      description: "Multi-level marketing platform with commission tracking, member network visualization, transaction management, and comprehensive business analytics.",
-      images: [mlmWebsite1, mlmWebsite2],
+      description:
+        "Dynamic multi-level marketing solution that provides commission tracking, member network visualization, transaction management, and performance analytics for growing business networks.",
+      images: [mlmWebsite1, mlmWebsite2, mlmWebsite3, mlmWebsite4],
       tech: ["React", "Node.js", "MongoDB", "Charts"],
       category: "Business",
       color: "bg-indigo-600",
@@ -97,8 +134,16 @@ const Portfolio = () => {
     },
     {
       name: "Tonyoga",
-      description: "Yoga and wellness management platform with class scheduling, instructor profiles, student tracking, membership management, and booking system.",
-      images: [tonyogaApp1, tonyogaApp2],
+      description:
+        "Comprehensive yoga and wellness course management platform with instructor scheduling, class booking, membership management, and progress tracking for students and trainers.",
+      images: [
+        tonyogaApp1,
+        tonyogaApp2,
+        tonyogaApp3,
+        tonyogaApp4,
+        tonyogaApp5,
+        tonyogaApp6,
+      ],
       tech: ["React", "Firebase", "Payment Integration"],
       category: "Health & Fitness",
       color: "bg-purple-500",
@@ -115,7 +160,8 @@ const Portfolio = () => {
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mb-4"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Explore our portfolio of successful mobile and web applications built for diverse industries
+            Explore our portfolio of successful mobile and web applications
+            built for diverse industries
           </p>
         </div>
 
@@ -138,7 +184,9 @@ const Portfolio = () => {
                             className="w-full h-full object-cover"
                           />
                           <div className="absolute top-4 right-4">
-                            <Badge className={`${project.color} text-white border-0`}>
+                            <Badge
+                              className={`${project.color} text-white border-0`}
+                            >
                               {imgIndex + 1} / {project.images.length}
                             </Badge>
                           </div>
@@ -154,7 +202,9 @@ const Portfolio = () => {
               <CardContent className="p-6">
                 <div className="flex items-start justify-between mb-3">
                   <div>
-                    <h3 className="text-xl font-bold text-foreground mb-1">{project.name}</h3>
+                    <h3 className="text-xl font-bold text-foreground mb-1">
+                      {project.name}
+                    </h3>
                     <Badge variant="secondary" className="text-xs">
                       {project.category}
                     </Badge>
@@ -162,7 +212,7 @@ const Portfolio = () => {
                   <Smartphone className="text-primary w-5 h-5" />
                 </div>
 
-                <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+                <p className="text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>
 

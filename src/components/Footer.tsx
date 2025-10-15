@@ -50,7 +50,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-4 text-foreground">Connect</h4>
             <div className="flex flex-col gap-2 text-muted-foreground">
               <a href="mailto:contact@devnex.com" className="hover:text-primary transition-colors">
-                contact@devnex.com
+                dosti1166@gmail.com
               </a>
               <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                 LinkedIn
@@ -62,7 +62,7 @@ const Footer = () => {
 
         <div className="pt-8 border-t border-border text-center text-muted-foreground">
           <p className="flex items-center justify-center gap-2">
-            © {currentYear} TheReactors. Made with{" "}
+            © {currentYear} NextGenReactors. Made with{" "}
             <Heart className="w-4 h-4 text-red-500 fill-red-500" /> for businesses worldwide.
           </p>
         </div>

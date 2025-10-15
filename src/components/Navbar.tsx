@@ -42,7 +42,7 @@ const Navbar = () => {
             onClick={() => scrollToSection("hero")}
             className="text-xl md:text-2xl font-bold text-foreground hover:text-primary transition-colors"
           >
-            The<span className="text-primary">Reactors</span>
+            Next<span className="text-primary">GenReactors</span>
           </button>
 
           {/* Desktop Navigation */}
