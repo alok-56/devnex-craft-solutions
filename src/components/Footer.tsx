@@ -52,9 +52,9 @@ const Footer = () => {
               <a href="mailto:contact@devnex.com" className="hover:text-primary transition-colors">
                 dosti1166@gmail.com
               </a>
-              <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              {/* <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                 LinkedIn
-              </a>
+              </a> */}
              
             </div>
           </div>
